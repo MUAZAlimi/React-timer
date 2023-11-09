@@ -22,6 +22,7 @@ body {
 .App {
   display: flex;
   flex-direction: column;
+  margin-top: 13rem;
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;

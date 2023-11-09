@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 
 const App = () => {
-  const [randomInput, setRandomInput] = useState("")
+  const [randomInput, setRandomInput] = useState("");
 
   return (
     <main className="App">
-      <label>Random Input</label>
-      <input type="text" 
+      <input
+        type="text"
         value={randomInput}
-        placeholder="Typpe anything...."
+        placeholder="Type anything...."
         onChange={(e) => setRandomInput(e.target.value)}
       />
-      <p>Result: {randomInput}</p>
+      <p>Renders: {randomInput}</p>
+
+      <br />
+      <br />
     </main>
   );
 };
