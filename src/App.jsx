@@ -1,16 +1,31 @@
-import {  useState } from "react";
+import {  useRef, useState } from "react";
 
 const App = () => {
   const [randomInput, setRandomInput] = useState("");
-  const [seconds, setSeconds] = useState(0)
+  const [seconds, setSeconds] = useState(0);
+
+  const renders = useRef(0)
+
+  const inputRef = useRef()
+
+  const handleInputChange = (e) => {
+   setRandomInput(e.target.value)
+
+   renders.current++
+  }
+
+  const focusOnInput = () => {
+    inputRef.current.focus()
+  }
 
   return (
     <main className="App">
       <input
+        ref={inputRef}
         type="text"
         value={randomInput}
         placeholder="Type anything...."
-        onChange={(e) => setRandomInput(e.target.value)}
+        onChange={handleInputChange}
       />
       <p>Renders: {randomInput}</p>
 
