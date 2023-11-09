@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 const App = () => {
   const [randomInput, setRandomInput] = useState("");
@@ -17,8 +17,20 @@ const App = () => {
       <br />
 
       <section>
-        
+        <button>Stop</button>
+        <button>Start</button>
       </section>
+        <button>Reset</button>
+
+        <br />
+        <br />
+
+        <p>Seconds: </p>
+
+        <br />
+        <br />
+
+        <p>{randomInput}</p>
     </main>
   );
 };
